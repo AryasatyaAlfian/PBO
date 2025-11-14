@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.main;
 
 /**
@@ -9,19 +8,25 @@ package com.mycompany.main;
  * @author payen
  */
 public class Main {
+
     public static void main(String[] args) {
-        HomePage home = new HomePage("Home Page");
-        DashboardPage dash = new DashboardPage("Dashboard Page");
+        prodi pr1 = new prodi();
+        prodi pr2 = new prodi();
 
-        System.out.println("===== Sebelum Login =====");
-        home.showFullPage();
-        dash.showFullPage();
+        pr1.setNama("Informatika");
+        pr2.setNama("Data Science");
 
-        System.out.println("\n===== Setelah Login =====");
-        home.login("Alfian");
-        dash.login("Alfian");
+        mahasiswa mhs1 = new mahasiswa();
+        mahasiswa mhs2 = new mahasiswa();
 
-        home.showFullPage();
-        dash.showFullPage();
+        mhs1.setNama("Bruce Wayne");
+        mhs1.setProdi(pr1);
+
+        mhs2.setNama("Tony Stark");
+        mhs2.setProdi(pr2);
+
+        System.out.println("=== Data Mahasiswa ===");
+        mhs1.displayMahasiswa();
+        mhs2.displayMahasiswa();
     }
 }
